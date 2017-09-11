@@ -1,0 +1,17 @@
+sudo: required
+
+language: generic
+
+services:
+- docker
+
+before_install:
+- docker pull debian:stretch
+- mkdir /tmp/docker
+- cp ./Makefile /tmp/docker
+- cp ./m4lvin-packaging-B2CF44CE.asc.gpg /tmp/docker
+- cp -vr ./upload /tmp/docker/upload
+
+install:
+- docker run --rm --interactive --tty --env PGPPHRASE --env PGPWRAPPER -v /tmp/docker/:/build -w /build debian:stretch /bin/bash -c "apt-get update && apt-get install -y -qq make --no-install-recommends && make"
+
