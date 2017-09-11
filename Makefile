@@ -54,3 +54,11 @@ default:
 			--exclude='/home' \
 			make install
 	sha256sum client_theming/build-linux/nextcloud-client*.deb
+	cp -v client_theming/build-linux/nextcloud-client*.deb upload/
+	cd upload/ && dpkg-scanpackages -m . > Packages
+	cd upload/ && gzip -c Packages > Packages.gz
+	cd upload/ && apt-ftparchive release . > Release
+	cd upload/ && gzip -c Release > Release.gz
+	@echo $(PGPWRAPPER) | gpg --batch --passphrase-fd 0 -d m4lvin-packaging-B2CF44CE.asc.gpg > m4lvin-packaging-B2CF44CE.asc
+	@gpg --import m4lvin-packaging-B2CF44CE.asc && rm m4lvin-packaging-B2CF44CE.asc
+	@cd upload/ && echo $(PGPPHRASE) | gpg --batch --passphrase-fd 0 --armor --sign --detach-sign --local-user 7E420D98B2CF44CE -o Release.gpg Release
