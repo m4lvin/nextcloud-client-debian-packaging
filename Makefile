@@ -1,6 +1,6 @@
 # Makefile to build Nextcloud client under Debian 9 Stretch
 
-VERSION = 2.3.2
+VERSION = 2.3.3
 
 # adapted from https://gitlab.com/packaging/nextcloud-client/
 
