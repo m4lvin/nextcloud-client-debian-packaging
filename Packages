@@ -1,0 +1,16 @@
+Package: nextcloud-client
+Version: 2.3.3-m4lvin-201811151512
+Architecture: amd64
+Maintainer: m4lvin packaging <m4lvin-packaging@w4eg.eu>
+Installed-Size: 9628
+Depends: libqt5keychain0|libqt5keychain1,libqt5webkit5,libqt5xml5
+Provides: nextcloud-client
+Filename: ./nextcloud-client_2.3.3-m4lvin-201811151512_amd64.deb
+Size: 1980440
+MD5sum: 368b8449fcfe5114dfeb9a5937d47d33
+SHA1: fdcca5911fbdeec2fa0d8922526cefe10b942932
+SHA256: 10ff2acbf6e625cee14a46bac57a21b9b753ee2efd8dec7fa8606ce8842987c7
+Section: checkinstall
+Priority: extra
+Description: Nexcloud desktop synchronization client
+

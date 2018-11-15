@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nextcloud Client Packages for Debian 9 Stretch</title>
+<style>
+* { font-family: sans-serif; }
+code { font-family: monospace; background-color: #ddd; display: block-inline; padding:5px; }
+pre { font-family: monospace; background-color: #ddd; display: block-inline; padding:5px; }
+a { color:olive; text-decoration:none; }
+a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<h1>Nextcloud Client Packages for Debian 9 Stretch</h1>
+<h2>Usage</h2>
+<p>Save the following under <code>/etc/apt/sources.list.d/nextcloud-client-m4lvin.list</code>.</p>
+<pre>
+# Nextcloud Client for Debian 9 Stretch:
+deb https://m4lvin.github.io/nextcloud-client-debian-packaging/ /
+</pre>
+<p>The following PGP key is used to sign this repository:</p>
+<pre>
+m4lvin packaging &lt;m4lvin-packaging@w4eg.eu&gt;
+fingerprint: 7492 24A4 AF35 2B44 511E 050E 7E42 0D98 B2CF 44CE
+</pre>
+<p>Get and install it like this:</p>
+<pre>
+gpg --recv 0x51B6417AB18303DE
+gpg --export 0x51B6417AB18303DE | sudo apt-key add -
+</pre>
+<p>Then install the client:</p>
+<pre>
+sudo apt update
+sudo apt install nextcloud-client
+</pre>
+<h2>Information</h2>
+<p>All build scripts are at <a href="https://github.com/m4lvin/nextcloud-client-debian-packaging">https://github.com/m4lvin/nextcloud-client-debian-packaging</a></p>
+<p>Logfiles at <a href="https://travis-ci.org/m4lvin/nextcloud-client-debian-packaging">https://travis-ci.org/m4lvin/nextcloud-client-debian-packaging</a></p>
+</body>
+</html>
