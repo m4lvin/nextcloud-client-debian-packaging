@@ -50,7 +50,7 @@ default:
 			--pkglicense="MIT" \
 			--pkgsource="https://github.com/nextcloud/client_theming" \
 			--provides="nextcloud-client" \
-			--requires="libqt5keychain0\|libqt5keychain1,libqt5webkit5,libqt5xml5" \
+			--requires="libqt5keychain0\|libqt5keychain1,libqt5webkit5,libqt5xml5,libqt5concurrent5" \
 			--exclude='/home' \
 			make install
 	sha256sum client_theming/build-linux/nextcloud-client*.deb
