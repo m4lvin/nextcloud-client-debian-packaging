@@ -11,30 +11,24 @@ a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
-<h1>Nextcloud Client Packages for Debian 9 Stretch</h1>
-<h2>Usage</h2>
-<p>Save the following under <code>/etc/apt/sources.list.d/nextcloud-client-m4lvin.list</code>.</p>
-<pre>
-# Nextcloud Client for Debian 9 Stretch:
-deb https://m4lvin.github.io/nextcloud-client-debian-packaging/ /
-</pre>
-<p>The following PGP key is used to sign this repository:</p>
-<pre>
-m4lvin packaging &lt;m4lvin-packaging@w4eg.eu&gt;
-fingerprint: 7492 24A4 AF35 2B44 511E 050E 7E42 0D98 B2CF 44CE
-</pre>
-<p>Get and install it like this:</p>
-<pre>
-gpg --recv 0x51B6417AB18303DE
-gpg --export 0x51B6417AB18303DE | sudo apt-key add -
-</pre>
-<p>Then install the client:</p>
-<pre>
-sudo apt update
-sudo apt install nextcloud-client
-</pre>
-<h2>Information</h2>
-<p>All build scripts are at <a href="https://github.com/m4lvin/nextcloud-client-debian-packaging">https://github.com/m4lvin/nextcloud-client-debian-packaging</a></p>
-<p>Logfiles at <a href="https://travis-ci.org/m4lvin/nextcloud-client-debian-packaging">https://travis-ci.org/m4lvin/nextcloud-client-debian-packaging</a></p>
+<h1 id="deprecated">DEPRECATED</h1>
+<p>This repository is no longer maintained. Packages of the Nextcloud desktop client are now available in <a href="https://packages.debian.org/stretch-backports/nextcloud-desktop">stretch-backports</a> and <a href="https://packages.debian.org/buster/nextcloud-desktop">buster</a>.</p>
+<h2 id="what-should-i-do-now">What should I do now?</h2>
+<p>If you used this repository before, please do the following.</p>
+<p>Quit the Nextcloud client.</p>
+<p>Remove the old package and repository:</p>
+<ol type="1">
+<li><p><code>sudo apt remove --purge nextcloud-client &amp;&amp; sudo autoremove --purge</code></p></li>
+<li><p><code>sudo rm /etc/apt/sources.list.d/nextcloud-client-m4lvin.list</code></p></li>
+<li><p><code>sudo apt-key del 749224A4AF352B44511E050E7E420D98B2CF44CE</code></p></li>
+<li><p><code>sudo apt update</code></p></li>
+</ol>
+<p>Then you can install the new package from <code>stretch-backports</code> as follows:</p>
+<ol type="1">
+<li><p>Ensure you have <code>deb https://deb.debian.org/debian stretch-backports main</code> in your <code>/etc/apt/sources.list</code>.</p></li>
+<li><p><code>sudo apt update &amp;&amp; sudo apt install -t stretch-backports nextcloud-desktop</code></p></li>
+<li><p>If you want dolphin integration, also do <code>sudo apt install -t stretch-backports dolphin-nextcloud</code>.</p></li>
+</ol>
+<p>Alternatively, you can use the <a href="https://nextcloud.com/install/#install-clients">AppImage from nextcloud.com</a>.</p>
 </body>
 </html>
