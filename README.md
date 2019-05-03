@@ -17,7 +17,7 @@ Quit the Nextcloud client.
 
 Remove the old package and repository:
 
-1. `sudo apt remove --purge nextcloud-client && sudo autoremove --purge`
+1. `sudo apt remove --purge nextcloud-client && sudo apt autoremove --purge`
 
 2. `sudo rm /etc/apt/sources.list.d/nextcloud-client-m4lvin.list`
 
