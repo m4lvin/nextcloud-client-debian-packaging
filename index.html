@@ -18,7 +18,7 @@ a:hover { text-decoration:underline; }
 <p>Quit the Nextcloud client.</p>
 <p>Remove the old package and repository:</p>
 <ol type="1">
-<li><p><code>sudo apt remove --purge nextcloud-client &amp;&amp; sudo autoremove --purge</code></p></li>
+<li><p><code>sudo apt remove --purge nextcloud-client &amp;&amp; sudo apt autoremove --purge</code></p></li>
 <li><p><code>sudo rm /etc/apt/sources.list.d/nextcloud-client-m4lvin.list</code></p></li>
 <li><p><code>sudo apt-key del 749224A4AF352B44511E050E7E420D98B2CF44CE</code></p></li>
 <li><p><code>sudo apt update</code></p></li>
