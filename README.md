@@ -5,9 +5,8 @@ title: Nextcloud Client Packages for Debian
 # DEPRECATED
 
 This repository is no longer maintained.
-Packages of the Nextcloud desktop client are now available in
-  [stretch-backports](https://packages.debian.org/stretch-backports/nextcloud-desktop) and
-  [buster](https://packages.debian.org/buster/nextcloud-desktop).
+Packages of the Nextcloud desktop client are available in the standard Debian repositories since buster.
+See <https://packages.debian.org/nextcloud-desktop>.
 
 ## What should I do now?
 
